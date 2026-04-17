@@ -1,4 +1,3 @@
-````markdown
 # 🌍 Climate Indices Automation Tool (ETCCDI) — v5.1.2  
 > Ferramenta avançada para cálculo, homogeneização e visualização de **27 índices climáticos (ETCCDI/WMO)**
 
@@ -6,9 +5,9 @@
 [![ETCCDI](https://img.shields.io/badge/Standard-ETCCDI%2FWMO-green.svg)](https://etccdi.pacificclimate.org/)  
 [![GUI](https://img.shields.io/badge/Interface-Tkinter-orange.svg)](https://docs.python.org/3/library/tkinter.html)
 
----
 
-## 🎯 Propósito
+
+ 🎯 Propósito
 
 Esta ferramenta foi desenvolvida para **automatizar, padronizar e tornar acessível** a análise climatológica baseada nos índices do **ETCCDI (WMO)**.
 
@@ -21,28 +20,28 @@ Ela resolve problemas comuns em pesquisas climáticas ao:
 - ✅ Disponibilizar uma **GUI intuitiva** (sem necessidade de programação)  
 - ✅ Padronizar automaticamente unidades (Kelvin → Celsius)  
 
----
 
-## ⚙️ Pipeline Metodológico
+
+ ⚙️ Pipeline Metodológico
 
 O processamento segue rigorosamente a literatura climatológica, estruturado em **6 etapas principais**:
 
-### 1. 📥 Ingestão & Pré-processamento
+# 1. 📥 Ingestão & Pré-processamento
 - Leitura de arquivos `.csv` (compatíveis com NASA POWER)  
 - Remoção automática de cabeçalhos (`-END HEADER-`)  
 - Conversão para `datetime` via `YEAR + DOY`  
 - Tratamento de valores inválidos (`-999 → NaN`)  
 
----
 
-### 2. 📊 Estruturação com `xarray`
+
+# 2. 📊 Estruturação com `xarray`
 - Conversão para `xarray.Dataset` (alto desempenho)  
 - Definição do período base (default: **1981–2010**)  
 - Cálculo de percentis diários com janela móvel **5CD (5-day centered)**  
 
----
 
-### 3. 🔬 Correção de Inhomogeneidade (Bootstrap)
+
+# 3. 🔬 Correção de Inhomogeneidade (Bootstrap)
 
 Métodos tradicionais introduzem **descontinuidades artificiais** nos índices percentílicos.
 
@@ -59,34 +58,34 @@ Esta ferramenta implementa o método de:
 
 ✔ Resultado: séries **homogêneas, robustas e sem “jumps” artificiais**
 
----
 
-### 4. 📈 Cálculo dos Índices ETCCDI
+
+# 4. 📈 Cálculo dos Índices ETCCDI
 
 Implementação baseada em `xclim` (compatível com padrões CF/SI)
 
-#### 🔹 Índices Absolutos
+ 🔹 Índices Absolutos
 `TXx`, `TXn`, `TNx`, `TNn`, `DTR`, `SU25`, `TR20`, `FD0`, `ID0`,  
 `Rx1day`, `Rx5day`, `SDII`, `R10mm`, `R20mm`, `CDD`, `CWD`, `PRCPTOT`
 
-#### 🔹 Índices Percentílicos
+ 🔹 Índices Percentílicos
 `TX90p`, `TX10p`, `TN90p`, `TN10p`,  
 `WSDI`, `CSDI`, `R95pTOT`, `R99pTOT`
 
 🔥 **Correção automática:** conversão de Kelvin → Celsius (`-273.15`)
 
----
 
-### 5. 📉 Análise Estatística
+
+# 5. 📉 Análise Estatística
 - Tendência linear (OLS) + `R²` + valor-p  
 - Normalização (Z-score)  
 - Decomposição sazonal (`statsmodels`)  
 - Autocorrelação e variabilidade  
 - Análise de extremos climáticos  
 
----
 
-### 6. 📊 Visualização Científica
+
+# 6. 📊 Visualização Científica
 
 Geração automática de **25+ gráficos** prontos para publicação:
 
@@ -102,17 +101,17 @@ Geração automática de **25+ gráficos** prontos para publicação:
 - Precipitação anual completa  
 - Comparação de temperatura (mín/méd/máx)  
 
----
 
-## 📦 Instalação
+
+ 📦 Instalação
 
 ```bash
 pip install pandas numpy xarray xclim scipy matplotlib seaborn statsmodels scikit-learn
 ````
 
----
 
-## 🚀 Diferenciais
+
+ 🚀 Diferenciais
 
 * ✔ Implementação do método de **Zhang et al. (2005)**
 * ✔ Total conformidade com **ETCCDI/WMO**
@@ -120,9 +119,9 @@ pip install pandas numpy xarray xclim scipy matplotlib seaborn statsmodels sciki
 * ✔ Interface gráfica amigável
 * ✔ Resultados prontos para publicação
 
----
 
-## 📚 Referência
+
+ 📚 Referência
 
 Zhang, X., et al. (2005).
 *"Avoiding inhomogeneity in percentile-based indices of temperature extremes."*
