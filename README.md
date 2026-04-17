@@ -127,5 +127,3 @@ pip install pandas numpy xarray xclim scipy matplotlib seaborn statsmodels sciki
 Zhang, X., et al. (2005).
 *"Avoiding inhomogeneity in percentile-based indices of temperature extremes."*
 Journal of Climate.
-
-```
