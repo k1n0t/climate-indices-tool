@@ -1,5 +1,3 @@
-Perfeito — aqui está o README inteiro em **formato raw (bloco único pronto pra copiar)**:
-
 ````markdown
 # 🌍 Climate Indices Automation Tool (ETCCDI) — v5.1.2  
 > Ferramenta avançada para cálculo, homogeneização e visualização de **27 índices climáticos (ETCCDI/WMO)**
@@ -130,14 +128,4 @@ Zhang, X., et al. (2005).
 *"Avoiding inhomogeneity in percentile-based indices of temperature extremes."*
 Journal of Climate.
 
-```
-
----
-
-Se quiser, posso te mandar uma versão ainda mais forte (nível projeto destaque no GitHub) com:
-- badges de DOI / licença / downloads  
-- GIF da interface  
-- seção “How to Use” com exemplo real  
-
-Só falar 👍
 ```
